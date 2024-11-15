@@ -1,4 +1,3 @@
-// src/shaders.js
 import 'aframe';
 import * as THREE from 'three';
 
@@ -56,7 +55,7 @@ if (window.AFRAME && !window.AFRAME.components['movement']) {
       this.direction.multiplyScalar(-this.data.speed * (timeDelta / 16.67));
 
       cameraEl.object3D.position.add(this.direction);
+
     },
   });
 }
-

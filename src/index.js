@@ -7,7 +7,7 @@ import './Shaders.js'; // Register shaders and custom components
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+
     <App />
-  </React.StrictMode>
+
 );
