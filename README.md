@@ -47,5 +47,6 @@
   - **`neon-grid` Shader**: Creates glowing circles effect for orientation.
 interactions.
 
+# npm start
 
 ![VR Navigation App Screenshot](/ScreenshotVR.png)

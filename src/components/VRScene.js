@@ -18,7 +18,7 @@ const VRScene = () => {
   return (
     <Scene>
       {/* Camera */}
-      <Camera isMovingForward={isMoveForward} />
+      <Camera isMovingForward={isMovingForward} />
 
       {/* Environment */}
       <Environment />

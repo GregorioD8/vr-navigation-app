@@ -12,5 +12,6 @@ const Camera = React.memo(({ isMovingForward }) => (
     // position is set once in useEffect
   />
 ));
+Camera.displayName = 'Camera';
 
 export default Camera;
