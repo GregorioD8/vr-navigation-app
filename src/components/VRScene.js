@@ -5,20 +5,20 @@ import Environment from './Environment';
 import Controls from './Controls';
 
 const VRScene = () => {
-  const [isMoveForward, setIsMoveForward] = useState(false);
+  const [isMovingForward, setIsMovingForward] = useState(false);
 
   const toggleMove = useCallback(() => {
-    setIsMoveForward((prev) => !prev); // Toggle forward movement
+    setIsMovingForward((prev) => !prev); // Toggle forward movement
   }, []);
 
   const stopMove = useCallback(() => {
-    setIsMoveForward(false); // Stop movement
+    setIsMovingForward(false); // Stop movement
   }, []);
 
   return (
     <Scene>
       {/* Camera */}
-      <Camera isMoveForward={isMoveForward} />
+      <Camera isMovingForward={isMoveForward} />
 
       {/* Environment */}
       <Environment />
