@@ -31,7 +31,7 @@
 ### 5. `ControlsComponent.js`
 - **Purpose**: Manages user interactions for navigation.
 - **Functionality**:
-  - **Mouse Click**: Toggles forward movement.
+  - **Mouse Click**: Toggles forward movement. 
   - **Spacebar Press**: Stops movement.
   - **Event Handling**: Adds and removes event listeners for user inputs.
 
@@ -44,8 +44,8 @@
 ### 7. `shaders.js`
 - **Purpose**: Registers custom shaders and components with A-Frame.
 - **Functionality**:
-  - **`neon-grid` Shader**: Creates a glowing grid effect for the ground.
-  - **`movement` Component**: Implements custom camera movement based on user interactions.
+  - **`neon-grid` Shader**: Creates glowing circles effect for orientation.
+interactions.
 
 
 ![VR Navigation App Screenshot](/ScreenshotVR.png)
