@@ -6,9 +6,12 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "aframe": "^1.6.0",
+    "aframe-react": "^4.4.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
+    "three": "^0.170.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -20,8 +23,22 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
-    ]
+      "react-app/jest",
+      "plugin:react/recommended"
+    ],
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+    "globals": {
+      "AFRAME": "readonly",
+      "THREE": "readonly"
+    },
+    "rules": {
+      "no-undef": "error",
+      "react/prop-types": "off"
+    }
   },
   "browserslist": {
     "production": [
@@ -34,5 +51,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.2"
   }
 }

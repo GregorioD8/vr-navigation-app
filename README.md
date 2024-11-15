@@ -1,70 +1,51 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Technologies Used
 
-## Available Scripts
+- **React**: JavaScript library for building user interfaces.
+- **A-Frame**: Web framework for creating VR experiences.
+- **aframe-react**: Integration library to use A-Frame within React.
+- **Three.js**: 3D library that A-Frame is built upon.
+- **ESLint**: Tool for identifying and fixing JavaScript code issues.
 
-In the project directory, you can run:
+## Components Overview
 
-### `npm start`
+### 1. `App.js`
+- **Purpose**: Serves as the root component.
+- **Functionality**: Wraps the VR scene within an `ErrorBoundary` to handle any rendering errors gracefully.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 2. `VRScene.js`
+- **Purpose**: Composes the main VR environment.
+- **Functionality**: Integrates `Camera`, `Environment`, and `Controls` components within an A-Frame `Scene`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 3. `CameraComponent.js`
+- **Purpose**: Defines the user's viewpoint in the VR scene.
+- **Functionality**: Sets up the A-Frame camera with custom movement logic, disabling default controls and enabling mouse look.
 
-### `npm test`
+### 4. `EnvironmentComponent.js`
+- **Purpose**: Builds the visual environment of the VR scene.
+- **Functionality**:
+  - **Ground Plane**: Displays a neon grid using a custom shader.
+  - **Neon Rings**: Creates multiple torus shapes to simulate a tunnel effect.
+  - **Sky**: Adds a solid black sky for immersion.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 5. `ControlsComponent.js`
+- **Purpose**: Manages user interactions for navigation.
+- **Functionality**:
+  - **Mouse Click**: Toggles forward movement.
+  - **Spacebar Press**: Stops movement.
+  - **Event Handling**: Adds and removes event listeners for user inputs.
 
-### `npm run build`
+### 6. `ErrorBoundary.js`
+- **Purpose**: Catches and handles JavaScript errors in the component tree.
+- **Functionality**:
+  - **Error Handling**: Displays a fallback UI when an error occurs.
+  - **Logging**: Logs error details to the console for debugging.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 7. `shaders.js`
+- **Purpose**: Registers custom shaders and components with A-Frame.
+- **Functionality**:
+  - **`neon-grid` Shader**: Creates a glowing grid effect for the ground.
+  - **`movement` Component**: Implements custom camera movement based on user interactions.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![VR Navigation App Screenshot](/ScreenshotVR.png)
